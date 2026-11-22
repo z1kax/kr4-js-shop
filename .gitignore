@@ -2,7 +2,7 @@
 .DS_Store
 Thumbs.db
 
-# Настройки редактора
+# VS Code
 .vscode/
 
 # Логи
@@ -15,3 +15,4 @@ Thumbs.db
 # Переменные окружения
 .env
 .env.*
+!.env.example
