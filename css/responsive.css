@@ -1,0 +1,341 @@
+/* ===================================
+   Адаптивные стили для КР №3 (Mobile First)
+   =================================== */
+
+/* Базовые правила для мобильных */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Чтобы картинки не вылезали за пределы экрана на телефонах */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Уменьшаем базовые отступы на мобильных (в КР1 было 24px) */
+main {
+  padding: 16px;
+}
+
+.site-header__inner {
+  padding: 16px;
+}
+
+/* Адаптация навигации (в колонку на мобильных) */
+.site-header__inner {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.site-nav__list {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+
+.site-nav__link {
+  display: block;
+  padding: 12px 16px;
+  width: 100%;
+}
+
+.site-header {
+  position: static; /* Отключаем прилипание на мобилках */
+}
+
+/* Hero-блок: делаем пониже на телефонах */
+.hero {
+  height: 400px; 
+  min-height: 400px;
+}
+
+.hero__content h1 {
+  font-size: clamp(28px, 7vw, 42px);
+}
+
+/* Сетка карточек в 1 колонку */
+.products-grid {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.product-card {
+  min-width: 0;
+}
+
+.product-card__title, 
+.product-card__description {
+  overflow-wrap: anywhere;
+}
+
+/* Каталог в 1 колонку */
+.catalog-layout {
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "filters"
+    "products";
+  gap: 24px;
+}
+
+.catalog-filters {
+  order: -1;
+}
+
+/* Форма заявки в 1 колонку */
+.order-form {
+  display: grid;
+  gap: 16px;
+}
+
+.order-form__field {
+  display: grid;
+  gap: 8px;
+}
+
+.order-form__input, 
+.order-form__select, 
+.order-form__textarea {
+  width: 100%;
+  min-height: 44px; /* Удобно тыкать пальцем */
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.order-form__textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.order-form__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Таблица с прокруткой */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 24px;
+}
+
+.product-table {
+  width: 100%;
+  min-width: 600px; /* Таблица не будет сжиматься в кашу */
+  border-collapse: collapse;
+}
+
+/* Модалка на мобильных */
+.order-dialog {
+  max-width: calc(100% - 32px);
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Кнопка наверх на мобильных */
+.scroll-top {
+  right: 16px;
+  bottom: 16px;
+}
+
+
+/* ===================================
+   МЕДИАЗАПРОСЫ (от планшета и выше)
+   Здесь мы ВОЗВРАЩАЕМ стили из КР1
+   =================================== */
+
+@media (min-width: 768px) {
+  /* Возвращаем отступы как в КР1 */
+  main {
+    padding: 24px;
+  }
+
+  .site-header__inner {
+    padding: 16px 24px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Навигация в строку */
+  .site-nav__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: auto;
+  }
+  
+  .site-nav__link {
+    width: auto;
+  }
+
+  /* Возвращаем липкую шапку */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  /* Hero-блок как в КР1 */
+  .hero {
+    height: 600px;
+    min-height: 600px;
+  }
+
+  /* Карточки в 2 колонки */
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Форма в 2 колонки */
+  .order-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .order-form__field:has(textarea),
+  .order-form__field:has(input[type="checkbox"]),
+  .order-form__actions {
+    grid-column: 1 / -1;
+  }
+
+  .order-form__actions {
+    flex-direction: row;
+  }
+
+  .scroll-top {
+    right: 32px;
+    bottom: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Карточки в 3 колонки */
+  .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Каталог с боковым фильтром */
+  .catalog-layout {
+    grid-template-columns: 260px minmax(0, 1fr); /* Как в твоем style.css */
+    grid-template-areas: "filters products";
+    align-items: start;
+  }
+  
+  .catalog-filters {
+    position: sticky;
+    top: 88px;
+    order: initial;
+  }
+}
+
+/* Фильтры в две колонки на планшетах (от 768px до 1024px) */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .filters-form {
+    grid-template-columns: 1fr 1fr; /* Две колонки */
+    align-items: start; /* Выравниваем элементы по верху */
+    gap: 20px; /* Чуть увеличим отступ между колонками */
+  }
+
+  /* Кнопка "Применить" должна занимать обе колонки */
+  .filters-form button[type="submit"] {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ===================================
+   Практика 13: A11y (Доступность)
+   =================================== */
+
+/* Ссылка пропуска к основному содержимому */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 1000;
+  padding: 8px 12px;
+  color: #ffffff;
+  background-color: #7D29F2; /* Твой фиолетовый */
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 16px;
+}
+
+/* Видимый фокус для всех интерактивных элементов (по методичке) */
+:focus-visible {
+  outline: 3px solid var(--color-primary, #7D29F2);
+  outline-offset: 3px;
+}
+
+.site-nav__link:focus-visible, 
+.button:focus-visible, 
+.order-form__input:focus-visible, 
+.order-form__textarea:focus-visible, 
+.order-form__select:focus-visible {
+  outline: 3px solid var(--color-primary, #7D29F2);
+  outline-offset: 3px;
+}
+
+/* Фикс контрастности бейджей для Lighthouse */
+.product-card__badge--hit {
+  color: #000000; /* Черный текст на оранжевом фоне */
+}
+.product-card__badge--new {
+  background-color: #117524; /* Чуть более темный зеленый */
+}
+
+/* Фикс контрастности хлебных крошек */
+.breadcrumbs__link {
+  text-decoration: underline;
+}
+
+/* Фикс кнопок в карточках */
+.product-card__button {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Адаптивные шрифты и кнопки через clamp */
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem); 
+}
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+.button {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  padding: clamp(8px, 2vw, 12px) clamp(16px, 3vw, 24px);
+}
+
+/* Центрируем навигацию на мобильных (до 768px) */
+@media (max-width: 767.98px) {
+  .site-header__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .site-nav__list {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .site-nav__link {
+    text-align: center;
+  }
+}

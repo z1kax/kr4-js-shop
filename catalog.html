@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог клавиатур KeyStore - механические, мембранные, беспроводные.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Каталог клавиатур - KeyStore">
+  <meta property="og:description" content="Каталог механических и мембранных клавиатур KeyStore.">
+  <meta property="og:image" content="https://z1kax.github.io/kr4-js-shop/images/preview.jpg">
+  <title>Каталог клавиатур - KeyStore</title>
+  
+  <!-- Подключение стилей -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">KeyStore</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Карточка товара</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Каталог</span>
+    </nav>
+
+    <section class="section">
+      <h1>Каталог клавиатур</h1>
+      <p>Механические, мембранные и беспроводные клавиатуры для любых задач.</p>
+    </section>
+
+    <section class="catalog-layout">
+      <aside class="catalog-filters">
+        <h2>Фильтры</h2>
+        <form class="filters-form" action="#" method="get">
+          <fieldset>
+            <legend>Тип</legend>
+            <label><input type="checkbox" name="type" value="mechanical"> Механические</label>
+            <label><input type="checkbox" name="type" value="membrane"> Мембранные</label>
+            <label><input type="checkbox" name="type" value="wireless"> Беспроводные</label>
+          </fieldset>
+          <fieldset>
+            <legend>Цена</legend>
+            <label for="price-from">От</label>
+            <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
+            <label for="price-to">До</label>
+            <input id="price-to" name="price-to" type="number" min="0" placeholder="15000">
+          </fieldset>
+          <button class="button button--primary" type="submit">Применить</button>
+        </form>
+      </aside>
+
+      <section class="catalog-products">
+        <h2>Список клавиатур</h2>
+        <div class="products-grid">
+          <article class="product-card product-card--discount">
+            <span class="product-card__badge product-card__badge--discount">Скидка</span>
+            <div class="product-card__image-wrap">
+              <img class="product-card__image" src="images/keyboard-ardor.jpg" srcset="images/keyboard-ardor.jpg 480w, images/keyboard-ardor.jpg 960w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" alt="Механическая клавиатура ARDOR GAMING Blade Pro" width="640" height="360" loading="lazy">
+            </div>
+            <h3 class="product-card__title">ARDOR GAMING Blade Pro</h3>
+            <p class="product-card__description">Механическая клавиатура, свитчи Red, RGB-подсветка, 87 клавиш.</p>
+            <p class="product-card__price"><span class="product-card__price-old">3 990 ₽</span> 2 990 ₽</p>
+            <button class="button button--primary product-card__button" type="button" data-product="ARDOR GAMING Blade Pro">Заказать</button>
+          </article>
+
+          <article class="product-card">
+            <span class="product-card__badge product-card__badge--hit">Хит</span>
+            <div class="product-card__image-wrap">
+              <img class="product-card__image" src="images/keyboard-logitech.jpg" srcset="images/keyboard-logitech.jpg 480w, images/keyboard-logitech.jpg 960w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" alt="Игровая механическая клавиатура Logitech G413 SE" width="640" height="360" loading="lazy">
+            </div>
+            <h3 class="product-card__title">Logitech G413 SE</h3>
+            <p class="product-card__description">Игровая механическая клавиатура, свитчи Romer-G, алюминиевый корпус.</p>
+            <p class="product-card__price">6 490 ₽</p>
+            <button class="button button--primary product-card__button" type="button" data-product="Logitech G413 SE">Заказать</button>
+          </article>
+
+          <article class="product-card">
+            <span class="product-card__badge product-card__badge--new">Новинка</span>
+            <div class="product-card__image-wrap">
+              <img class="product-card__image" src="images/keyboard-keychron.jpg" srcset="images/keyboard-keychron.jpg 480w, images/keyboard-keychron.jpg 960w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" alt="Беспроводная клавиатура Keychron K2 V2" width="640" height="360" loading="lazy">
+            </div>
+            <h3 class="product-card__title">Keychron K2 V2</h3>
+            <p class="product-card__description">Беспроводная механическая клавиатура, Bluetooth 5.1, свитчи Gateron Brown.</p>
+            <p class="product-card__price">8 990 ₽</p>
+            <button class="button button--primary product-card__button" type="button" data-product="Keychron K2 V2">Заказать</button>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image-wrap">
+              <img class="product-card__image" src="images/keyboard-hyperx.jpg" srcset="images/keyboard-hyperx.jpg 480w, images/keyboard-hyperx.jpg 960w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" alt="Механическая клавиатура HyperX Alloy Origins" width="640" height="360" loading="lazy">
+            </div>
+            <h3 class="product-card__title">HyperX Alloy Origins</h3>
+            <p class="product-card__description">Механическая клавиатура с авиационным алюминием и свитчами HyperX Red.</p>
+            <p class="product-card__price">7 990 ₽</p>
+            <button class="button button--primary product-card__button" type="button" data-product="HyperX Alloy Origins">Заказать</button>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image-wrap">
+              <img class="product-card__image" src="images/keyboard-oklick.jpg" srcset="images/keyboard-oklick.jpg 480w, images/keyboard-oklick.jpg 960w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" alt="Мембранная клавиатура Oklick 980G" width="640" height="360" loading="lazy">
+            </div>
+            <h3 class="product-card__title">Oklick 980G</h3>
+            <p class="product-card__description">Мембранная клавиатура с подсветкой, для офиса и учёбы.</p>
+            <p class="product-card__price">990 ₽</p>
+            <button class="button button--primary product-card__button" type="button" data-product="Oklick 980G">Заказать</button>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card__image-wrap">
+              <img class="product-card__image" src="images/keyboard-ducky.jpg" srcset="images/keyboard-ducky.jpg 480w, images/keyboard-ducky.jpg 960w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" alt="Механическая клавиатура Ducky One 3 TKL" width="640" height="360" loading="lazy">
+            </div>
+            <h3 class="product-card__title">Ducky One 3 TKL</h3>
+            <p class="product-card__description">Механическая клавиатура премиум-класса, свитчи Cherry MX, hot-swap.</p>
+            <p class="product-card__price">12 990 ₽</p>
+            <button class="button button--primary product-card__button" type="button" data-product="Ducky One 3 TKL">Заказать</button>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 KeyStore. Все права защищены.</p>
+    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+  
+  <!-- Модальное окно и скрипты остаются без изменений -->
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <input id="selected-product" name="selected-product" type="hidden">
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-name">Имя</label>
+        <input class="order-form__input" id="order-name" name="name" type="text" minlength="2" required>
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-email">E-mail</label>
+        <input class="order-form__input" id="order-email" name="email" type="email" required>
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-phone">Телефон</label>
+        <input class="order-form__input" id="order-phone" name="phone" type="tel" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+        <small>Формат: +7 (900) 000-00-00</small>
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-topic">Тема заявки</label>
+        <select class="order-form__select" id="order-topic" name="topic" required>
+          <option value="">Выберите тему</option>
+          <option value="product">Заказ клавиатуры</option>
+          <option value="consultation">Консультация по выбору</option>
+          <option value="delivery">Вопрос по доставке</option>
+        </select>
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-comment">Комментарий</label>
+        <textarea class="order-form__textarea" id="order-comment" name="comment" rows="4"></textarea>
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label">
+          <input class="order-form__input" id="order-agreement" name="agreement" type="checkbox" required>
+          Я согласен на обработку данных
+        </label>
+      </div>
+      <div class="order-form__actions">
+        <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+        <button class="button button--primary" type="submit">Отправить заявку</button>
+      </div>
+    </form>
+  </dialog>
+  <p class="success-message" id="success-message" hidden>Форма успешно отправлена!</p>
+  <a class="button button--primary scroll-top" href="#" aria-label="Наверх">↑</a>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Оформление заявки на клавиатуру в магазине KeyStore.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Оформление заявки - KeyStore">
+  <meta property="og:description" content="Оформление заявки на клавиатуру в магазине KeyStore.">
+  <meta property="og:image" content="https://z1kax.github.io/kr4-js-shop/images/preview.jpg">
+
+  <title>Оформление заявки - KeyStore</title>
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">KeyStore</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Карточка товара</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="order.html" aria-current="page">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Оформление заявки</span>
+    </nav>
+
+    <section class="section">
+      <h1>Оформление заявки</h1>
+      <p>Заполните форму ниже - и мы свяжемся с вами для уточнения деталей заказа.</p>
+
+      <form class="order-form" action="#" method="post">
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-page-name">Имя</label>
+          <input class="order-form__input" id="order-page-name" name="name" type="text"
+                 placeholder="Введите ваше имя" minlength="2" required>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-page-email">E-mail</label>
+          <input class="order-form__input" id="order-page-email" name="email" type="email"
+                 placeholder="example@mail.ru" required>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-page-phone">Телефон</label>
+          <input class="order-form__input" id="order-page-phone" name="phone" type="tel"
+                 inputmode="tel" placeholder="+7 (900) 000-00-00"
+                 pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+          <small>Формат: +7 (900) 000-00-00</small>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-page-topic">Тема заявки</label>
+          <select class="order-form__select" id="order-page-topic" name="topic" required>
+            <option value="">Выберите тему</option>
+            <option value="product">Заказ клавиатуры</option>
+            <option value="consultation">Консультация по выбору</option>
+            <option value="delivery">Вопрос по доставке</option>
+          </select>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-page-comment">Комментарий</label>
+          <textarea class="order-form__textarea" id="order-page-comment" name="comment"
+                    rows="4" placeholder="Укажите дополнительную информацию"></textarea>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label">
+            <input class="order-form__input" id="order-page-agreement" name="agreement"
+                   type="checkbox" required>
+            Я согласен на обработку данных
+          </label>
+        </div>
+
+        <div class="order-form__actions">
+          <button class="button button--primary" type="submit">Отправить заявку</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 KeyStore. Все права защищены.</p>
+    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+
+  <a class="button button--primary scroll-top" href="#" aria-label="Наверх">↑</a>
+</body>
+</html>
