@@ -64,5 +64,27 @@ const products = [
     isAvailable: false,
     image: 'images/product-6.jpg',
     description: 'Механическая клавиатура премиум-класса, свитчи Cherry MX, hot-swap.'
+  },
+  {
+    id: 7,
+    title: 'Corsair K55 RGB PRO',
+    category: 'membrane',
+    price: 3990,
+    discountPercent: 0,
+    rating: 4.4,
+    isAvailable: true,
+    image: 'images/product-7.jpg',
+    description: 'Мембранная клавиатура с RGB-подсветкой, шестью макроклавишами и защитой от брызг.'
+  },
+  {
+    id: 8,
+    title: 'Razer Pro Type Ultra',
+    category: 'wireless',
+    price: 13990,
+    discountPercent: 0,
+    rating: 4.6,
+    isAvailable: true,
+    image: 'images/product-8.jpg',
+    description: 'Беспроводная клавиатура для работы и игр, подключение по Bluetooth и 2.4 ГГц, тихие механические свитчи.'
   }
 ];
