@@ -730,3 +730,19 @@ a:hover {
   border-radius: var(--radius-md);
   color: var(--color-muted);
 }
+
+body.theme-dark {
+  --color-text: #f2eefb;
+  --color-bg: #14101d;
+  --color-surface: #1e1830;
+  --color-surface-accent: #2a2140;
+  --color-border: #3a2f55;
+  --color-muted: #b4aecd;
+  --color-primary: #a06bff;
+  --color-primary-dark: #8a4fff;
+  --color-success-bg: #14301c;
+}
+
+body.theme-dark .product-card__image-wrap {
+  background-color: var(--color-surface-accent);
+}
