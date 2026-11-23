@@ -6,7 +6,9 @@ const products = [
     price: 3990,
     discountPercent: 25,
     rating: 4.7,
-    isAvailable: true
+    isAvailable: true,
+    image: 'images/product-1.jpg',
+    description: 'Механическая клавиатура, свитчи Red, RGB-подсветка, 87 клавиш.'
   },
   {
     id: 2,
@@ -15,7 +17,9 @@ const products = [
     price: 6490,
     discountPercent: 0,
     rating: 4.5,
-    isAvailable: true
+    isAvailable: true,
+    image: 'images/product-2.jpg',
+    description: 'Игровая механическая клавиатура, свитчи Romer-G, алюминиевый корпус.'
   },
   {
     id: 3,
@@ -24,7 +28,9 @@ const products = [
     price: 8990,
     discountPercent: 0,
     rating: 4.8,
-    isAvailable: true
+    isAvailable: true,
+    image: 'images/product-3.jpg',
+    description: 'Беспроводная механическая клавиатура, Bluetooth 5.1, свитчи Gateron Brown.'
   },
   {
     id: 4,
@@ -33,7 +39,9 @@ const products = [
     price: 7990,
     discountPercent: 0,
     rating: 4.6,
-    isAvailable: true
+    isAvailable: true,
+    image: 'images/product-4.jpg',
+    description: 'Механическая клавиатура с авиационным алюминием и свитчами HyperX Red.'
   },
   {
     id: 5,
@@ -42,7 +50,9 @@ const products = [
     price: 990,
     discountPercent: 0,
     rating: 4.2,
-    isAvailable: true
+    isAvailable: true,
+    image: 'images/product-5.jpg',
+    description: 'Мембранная клавиатура с подсветкой, для офиса и учёбы.'
   },
   {
     id: 6,
@@ -51,6 +61,8 @@ const products = [
     price: 12990,
     discountPercent: 0,
     rating: 4.9,
-    isAvailable: false
+    isAvailable: false,
+    image: 'images/product-6.jpg',
+    description: 'Механическая клавиатура премиум-класса, свитчи Cherry MX, hot-swap.'
   }
 ];
