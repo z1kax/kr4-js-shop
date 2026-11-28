@@ -653,19 +653,22 @@ a:hover {
 
 .product-card__actions {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-sm);
   margin-top: auto;
 }
 
-.product-card__actions .product-card__button {
+.product-card__actions .product-card__button,
+.product-card__cart-button {
+  flex: 1 1 120px;
   width: auto;
   margin-top: 0;
   align-self: stretch;
   text-align: center;
+  white-space: nowrap;
 }
 
 .product-card__cart-button {
-  flex: 1;
   padding: var(--space-sm) var(--space-md);
   border: 1px solid var(--color-primary);
   border-radius: var(--radius-sm);
@@ -673,7 +676,6 @@ a:hover {
   background-color: transparent;
   font: inherit;
   cursor: pointer;
-  text-align: center;
 }
 
 .product-card__cart-button:hover {
@@ -745,4 +747,41 @@ body.theme-dark {
 
 body.theme-dark .product-card__image-wrap {
   background-color: var(--color-surface-accent);
+}
+
+/* Компактная кнопка переключения темы */
+.theme-toggle {
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-primary);
+}
+
+.scroll-top {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+/* Скрываем свою кнопку наверх на мобильных,
+   чтобы не дублировать встроенную кнопку браузера */
+@media (max-width: 767px) {
+  .scroll-top {
+    display: none;
+  }
 }

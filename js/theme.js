@@ -14,8 +14,15 @@ function getStoredTheme() {
 function applyTheme(theme) {
   document.body.classList.toggle('theme-dark', theme === 'dark');
   if (themeToggle) {
-    themeToggle.textContent = theme === 'dark' ? 'Светлая тема' : 'Тёмная тема';
+    const icon = themeToggle.querySelector('.theme-toggle__icon');
+    if (icon) {
+      icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
     themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
+    themeToggle.setAttribute(
+      'aria-label',
+      theme === 'dark' ? 'Переключить на светлую тему' : 'Переключить на тёмную тему'
+    );
   }
 }
 

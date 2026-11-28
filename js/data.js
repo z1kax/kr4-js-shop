@@ -18,6 +18,7 @@ const products = [
     discountPercent: 0,
     rating: 4.5,
     isAvailable: true,
+    badge: 'hit',
     image: 'images/product-2.jpg',
     description: 'Игровая механическая клавиатура, свитчи Romer-G, алюминиевый корпус.'
   },
@@ -29,6 +30,7 @@ const products = [
     discountPercent: 0,
     rating: 4.8,
     isAvailable: true,
+    badge: 'new',
     image: 'images/product-3.jpg',
     description: 'Беспроводная механическая клавиатура, Bluetooth 5.1, свитчи Gateron Brown.'
   },

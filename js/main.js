@@ -50,19 +50,3 @@ if (orderForm) {
     }
   });
 }
-
-const messageElement = document.querySelector('.js-message');
-const productOutputElement = document.querySelector('.product-output');
-
-if (messageElement) {
-  messageElement.textContent = 'Массив товаров и функции обработки данных подключены.';
-}
-
-if (productOutputElement) {
-  productOutputElement.textContent = [
-    `Всего товаров: ${products.length}`,
-    `Товаров в наличии: ${countAvailableProducts(products)}`,
-    `Средняя цена: ${calculateAveragePrice(products)} руб.`,
-    `Результатов поиска "ardor": ${searchProducts(products, 'ardor').length}`
-  ].join('\n');
-}

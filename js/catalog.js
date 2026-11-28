@@ -121,11 +121,15 @@ function createProductCard(product) {
   image.loading = 'lazy';
   imageWrap.append(image);
 
-  if (product.discountPercent > 0) {
+    if (product.discountPercent > 0) {
     card.classList.add('product-card--discount');
+  }
+  const badgeType = product.discountPercent > 0 ? 'discount' : product.badge;
+  if (badgeType) {
+    const badgeLabels = { discount: 'Скидка', hit: 'Хит', new: 'Новинка' };
     const badge = document.createElement('span');
-    badge.classList.add('product-card__badge', 'product-card__badge--discount');
-    badge.textContent = 'Скидка';
+    badge.classList.add('product-card__badge', `product-card__badge--${badgeType}`);
+    badge.textContent = badgeLabels[badgeType];
     imageWrap.append(badge);
   }
 
@@ -143,7 +147,7 @@ function createProductCard(product) {
     const oldPrice = document.createElement('span');
     oldPrice.classList.add('product-card__price-old');
     oldPrice.textContent = formatPrice(product.price);
-    price.append(oldPrice, formatPrice(calculateFinalPrice(product.price, product.discountPercent)));
+    price.append(oldPrice, formatPrice(Math.round(calculateFinalPrice(product.price, product.discountPercent))));
   } else {
     price.textContent = formatPrice(product.price);
   }
@@ -163,7 +167,7 @@ function createProductCard(product) {
   cartButton.dataset.productId = String(product.id);
 
   const orderButton = document.createElement('button');
-  orderButton.classList.add('product-card__button');
+  orderButton.classList.add('button', 'button--primary', 'product-card__button');
   orderButton.type = 'button';
   orderButton.dataset.product = product.title;
   orderButton.dataset.action = 'open-order';
