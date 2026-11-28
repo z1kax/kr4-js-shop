@@ -650,3 +650,138 @@ a:hover {
   border-left: 4px solid var(--color-success);
   background-color: var(--color-success-bg);
 }
+
+.product-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: auto;
+}
+
+.product-card__actions .product-card__button,
+.product-card__cart-button {
+  flex: 1 1 120px;
+  width: auto;
+  margin-top: 0;
+  align-self: stretch;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.product-card__cart-button {
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+  background-color: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.product-card__cart-button:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.product-card__cart-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cart-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-sm);
+}
+
+.cart-item__details {
+  color: var(--color-muted);
+}
+
+.cart-item__remove {
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-sm);
+  color: var(--color-danger);
+  background-color: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.cart-item__remove:hover {
+  color: var(--color-white);
+  background-color: var(--color-danger);
+}
+
+.cart-summary {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  border-left: 4px solid var(--color-primary);
+  background-color: var(--color-surface);
+}
+
+.cart-empty {
+  padding: var(--space-md);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-muted);
+}
+
+body.theme-dark {
+  --color-text: #f2eefb;
+  --color-bg: #14101d;
+  --color-surface: #1e1830;
+  --color-surface-accent: #2a2140;
+  --color-border: #3a2f55;
+  --color-muted: #b4aecd;
+  --color-primary: #a06bff;
+  --color-primary-dark: #8a4fff;
+  --color-success-bg: #14301c;
+}
+
+body.theme-dark .product-card__image-wrap {
+  background-color: var(--color-surface-accent);
+}
+
+/* Компактная кнопка переключения темы */
+.theme-toggle {
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-primary);
+}
+
+.scroll-top {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+/* Скрываем свою кнопку наверх на мобильных,
+   чтобы не дублировать встроенную кнопку браузера */
+@media (max-width: 767px) {
+  .scroll-top {
+    display: none;
+  }
+}

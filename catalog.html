@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="css/responsive.css" />
     <script src="js/data.js" defer></script>
     <script src="js/catalog.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/theme.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
   <body>
@@ -46,6 +48,7 @@
                 >Каталог</a
               >
             </li>
+            <li><a class="site-nav__link" href="cart.html">Корзина</a></li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="product.html">Карточка товара</a>
             </li>
@@ -57,6 +60,15 @@
             </li>
           </ul>
         </nav>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Переключить тему"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle__icon">🌙</span>
+        </button>
       </div>
     </header>
 
@@ -109,22 +121,18 @@
         </aside>
 
         <section class="catalog-products">
-          <h2>Список клавиатур</h2>
-          <div class="products-grid">
-            <p class="cart-counter" aria-live="polite">В корзине: 0</p>
-            <p class="catalog-count" aria-live="polite"></p>
-            <p class="catalog-empty" hidden>
-              По выбранным условиям товары не найдены.
-            </p>
-            <div class="products-grid" data-products-container></div>
-          </div>
+          <p class="cart-counter" aria-live="polite">В корзине: 0</p>
+          <p class="catalog-count" aria-live="polite"></p>
+          <p class="catalog-empty" hidden>
+            По выбранным условиям товары не найдены.
+          </p>
+          <div class="products-grid" data-products-container></div>
         </section>
       </section>
     </main>
 
     <footer class="site-footer">
       <p>&copy; 2026 KeyStore. Все права защищены.</p>
-      <p>Дисциплина: Фронтенд и бэкенд разработка</p>
     </footer>
 
     <!-- Модальное окно и скрипты остаются без изменений -->

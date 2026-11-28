@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <script src="js/validation.js" defer></script>
+    <script src="js/theme.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Перейти к основному содержимому</a>
@@ -39,6 +40,7 @@
             <li class="site-nav__item">
               <a class="site-nav__link" href="catalog.html">Каталог</a>
             </li>
+            <li><a class="site-nav__link" href="cart.html">Корзина</a></li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="product.html">Карточка товара</a>
             </li>
@@ -55,6 +57,15 @@
             </li>
           </ul>
         </nav>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Переключить тему"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle__icon">🌙</span>
+        </button>
       </div>
     </header>
 
@@ -135,16 +146,16 @@
           </div>
 
           <div class="order-form__field">
-            <label class="order-form__label">
+            <label class="order-form__label" for="order-consent">
               <input
                 class="order-form__input"
-                id="order-page-agreement"
-                name="agreement"
+                id="order-consent"
+                name="consent"
                 type="checkbox"
-                required
               />
               Я согласен на обработку данных
             </label>
+            <p class="form-error" id="order-consent-error"></p>
           </div>
 
           <div class="order-form__actions">
@@ -159,7 +170,6 @@
 
     <footer class="site-footer">
       <p>&copy; 2026 KeyStore. Все права защищены.</p>
-      <p>Дисциплина: Фронтенд и бэкенд разработка</p>
     </footer>
 
     <a class="button button--primary scroll-top" href="#" aria-label="Наверх"

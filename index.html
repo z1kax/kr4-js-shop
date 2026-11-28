@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/responsive.css" />
     <script src="js/data.js" defer></script>
     <script src="js/catalog.js" defer></script>
+    <script src="js/theme.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
   <body>
@@ -46,6 +47,7 @@
             <li class="site-nav__item">
               <a class="site-nav__link" href="catalog.html">Каталог</a>
             </li>
+            <li><a class="site-nav__link" href="cart.html">Корзина</a></li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="product.html">Карточка товара</a>
             </li>
@@ -57,6 +59,15 @@
             </li>
           </ul>
         </nav>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Переключить тему"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle__icon">🌙</span>
+        </button>
       </div>
     </header>
 
@@ -112,10 +123,7 @@
               <img
                 class="product-card__image"
                 src="images/product-1.jpg"
-                srcset="
-                  images/product-1.jpg 480w,
-                  images/product-1.jpg 960w
-                "
+                srcset="images/product-1.jpg 480w, images/product-1.jpg 960w"
                 sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                 alt="Механическая клавиатура ARDOR GAMING Blade Pro"
                 width="640"
@@ -128,7 +136,7 @@
               Механическая клавиатура, свитчи Red, RGB-подсветка, 87 клавиш.
             </p>
             <p class="product-card__price">
-              <span class="product-card__price-old">3 990 ₽</span> 2 990 ₽
+              <span class="product-card__price-old">3 990 ₽</span> 2 993 ₽
             </p>
             <button
               class="button button--primary product-card__button"
@@ -148,10 +156,7 @@
               <img
                 class="product-card__image"
                 src="images/product-2.jpg"
-                srcset="
-                  images/product-2.jpg 480w,
-                  images/product-2.jpg 960w
-                "
+                srcset="images/product-2.jpg 480w, images/product-2.jpg 960w"
                 sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                 alt="Игровая механическая клавиатура Logitech G413 SE"
                 width="640"
@@ -183,10 +188,7 @@
               <img
                 class="product-card__image"
                 src="images/product-3.jpg"
-                srcset="
-                  images/product-3.jpg 480w,
-                  images/product-3.jpg 960w
-                "
+                srcset="images/product-3.jpg 480w, images/product-3.jpg 960w"
                 sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                 alt="Беспроводная клавиатура Keychron K2 V2"
                 width="640"
@@ -218,17 +220,10 @@
           заявку, и мы подберём клавиатуру под ваши задачи.
         </p>
       </aside>
-
-      <section class="section js-check" aria-labelledby="js-check-title">
-        <h2 id="js-check-title">Проверка JavaScript</h2>
-        <p class="js-message">JavaScript пока не выполнился.</p>
-        <pre class="product-output"></pre>
-      </section>
     </main>
 
     <footer class="site-footer" id="contacts">
       <p>&copy; 2026 KeyStore. Все права защищены.</p>
-      <p>Дисциплина: Фронтенд и бэкенд разработка</p>
     </footer>
 
     <!-- Модальное окно (оставил как в КР1) -->

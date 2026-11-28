@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина - KeyStore</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">KeyStore</a>
+        <nav class="site-nav">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="index.html">Главная</a></li>
+            <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+            <li>
+              <a class="site-nav__link site-nav__link--active" href="cart.html"
+                >Корзина</a
+              >
+            </li>
+            <li>
+              <a class="site-nav__link" href="product.html">Карточка товара</a>
+            </li>
+            <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+            <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Переключить тему"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle__icon">🌙</span>
+        </button>
+      </div>
+    </header>
+    <main id="main">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">Корзина</span>
+      </nav>
+      <h1>Корзина</h1>
+      <section class="section">
+        <p class="cart-counter" aria-live="polite">В корзине: 0</p>
+        <p class="cart-empty" hidden>
+          Корзина пуста. Добавьте товары из каталога.
+        </p>
+        <div data-cart-container></div>
+        <div class="cart-summary">
+          <p data-cart-total>Итого: 0 руб.</p>
+          <div class="order-form__actions">
+            <button
+              class="button button--secondary"
+              type="button"
+              data-cart-clear
+            >
+              Очистить корзину
+            </button>
+            <a class="button button--primary" href="order.html"
+              >Оформить заявку</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 KeyStore. Все права защищены.</p>
+    </footer>
+    <a class="scroll-top" href="#">↑</a>
+  </body>
+</html>

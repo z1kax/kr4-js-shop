@@ -1,142 +1,276 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ARDOR GAMING Blade Pro - механическая клавиатура с RGB-подсветкой и свитчами Red.">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="ARDOR GAMING Blade Pro - KeyStore">
-  <meta property="og:description" content="Механическая клавиатура с RGB-подсветкой и свитчами Red.">
-  <meta property="og:image" content="https://z1kax.github.io/kr4-js-shop/images/preview.jpg">
-  <title>ARDOR GAMING Blade Pro - KeyStore</title>
-  
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <script src="js/data.js" defer></script>
-  <script src="js/main.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">KeyStore</a>
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="product.html" aria-current="page">Карточка товара</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ARDOR GAMING Blade Pro - механическая клавиатура с RGB-подсветкой и свитчами Red."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ARDOR GAMING Blade Pro - KeyStore" />
+    <meta
+      property="og:description"
+      content="Механическая клавиатура с RGB-подсветкой и свитчами Red."
+    />
+    <meta
+      property="og:image"
+      content="https://z1kax.github.io/kr4-js-shop/images/preview.jpg"
+    />
+    <title>ARDOR GAMING Blade Pro - KeyStore</title>
 
-  <main id="main">
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a class="breadcrumbs__link" href="index.html">Главная</a>
-      <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
-      <span class="breadcrumbs__current">Карточка товара</span>
-    </nav>
-
-    <section class="section">
-      <h1>ARDOR GAMING Blade Pro</h1>
-      <article class="product-card product-card--discount">
-        <span class="product-card__badge product-card__badge--discount">Скидка</span>
-        <div class="product-card__image-wrap product-card__image-wrap--large">
-          <img class="product-card__image product-card__image--large" src="images/keyboard-ardor-large.jpg" srcset="images/keyboard-ardor-large.jpg 600w, images/keyboard-ardor-large.jpg 1200w" sizes="(max-width: 767px) 100vw, 50vw" alt="Механическая клавиатура ARDOR GAMING Blade Pro" width="1200" height="600" loading="lazy">
-        </div>
-        <h2 class="product-card__title">ARDOR GAMING Blade Pro</h2>
-        <p class="product-card__description">
-          Компактная механическая клавиатура формата TKL с RGB-подсветкой,
-          съёмным кабелем USB Type-C и свитчами Red.
-          Подходит для игр, программирования и повседневной работы.
-        </p>
-        <p class="product-card__price">
-          <span class="product-card__price-old">3 990 ₽</span>
-          2 990 ₽
-        </p>
-        <button class="button button--primary product-card__button" type="button" data-product="ARDOR GAMING Blade Pro">
-          Заказать
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">KeyStore</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li><a class="site-nav__link" href="cart.html">Корзина</a></li>
+            <li class="site-nav__item">
+              <a
+                class="site-nav__link site-nav__link--active"
+                href="product.html"
+                aria-current="page"
+                >Карточка товара</a
+              >
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html">Заявка</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Переключить тему"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle__icon">🌙</span>
         </button>
-      </article>
-    </section>
+      </div>
+    </header>
 
-    <section class="section">
-      <h2>Характеристики</h2>
-      <!-- Этап 16. Обертка для таблицы -->
-      <div class="table-wrapper">
-        <table class="product-table">
-          <caption>Технические характеристики ARDOR GAMING Blade Pro</caption>
-          <thead>
-            <tr>
-              <th>Параметр</th>
-              <th>Значение</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Тип</td><td>Механическая</td></tr>
-            <tr><td>Свитчи</td><td>Red (линейные)</td></tr>
-            <tr><td>Раскладка</td><td>87 клавиш (TKL)</td></tr>
-            <tr><td>Подсветка</td><td>RGB, 16.8 млн цветов</td></tr>
-            <tr><td>Подключение</td><td>USB Type-C, съёмный кабель</td></tr>
-            <tr><td>Гарантия</td><td>12 месяцев</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  </main>
+    <main id="main">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+        <span class="breadcrumbs__current">Карточка товара</span>
+      </nav>
 
-  <footer class="site-footer">
-    <p>&copy; 2026 KeyStore. Все права защищены.</p>
-    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
-  </footer>
+      <section class="section">
+        <h1>ARDOR GAMING Blade Pro</h1>
+        <article class="product-card product-card--discount">
+          <span class="product-card__badge product-card__badge--discount"
+            >Скидка</span
+          >
+          <div class="product-card__image-wrap product-card__image-wrap--large">
+            <img
+              class="product-card__image product-card__image--large"
+              src="images/keyboard-ardor-large.jpg"
+              srcset="
+                images/keyboard-ardor-large.jpg  600w,
+                images/keyboard-ardor-large.jpg 1200w
+              "
+              sizes="(max-width: 767px) 100vw, 50vw"
+              alt="Механическая клавиатура ARDOR GAMING Blade Pro"
+              width="1200"
+              height="600"
+              loading="lazy"
+            />
+          </div>
+          <h2 class="product-card__title">ARDOR GAMING Blade Pro</h2>
+          <p class="product-card__description">
+            Компактная механическая клавиатура формата TKL с RGB-подсветкой,
+            съёмным кабелем USB Type-C и свитчами Red. Подходит для игр,
+            программирования и повседневной работы.
+          </p>
+          <p class="product-card__price">
+            <span class="product-card__price-old">3 990 ₽</span>
+            2 990 ₽
+          </p>
+          <button
+            class="button button--primary product-card__button"
+            type="button"
+            data-product="ARDOR GAMING Blade Pro"
+          >
+            Заказать
+          </button>
+        </article>
+      </section>
 
-  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
-    <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
-    <form class="order-form" id="order-form" action="#" method="post" novalidate>
-      <input id="selected-product" name="selected-product" type="hidden">
-      <div class="order-form__field">
-        <label class="order-form__label" for="order-name">Имя</label>
-        <input class="order-form__input" id="order-name" name="name" type="text" minlength="2" required>
-      </div>
-      <div class="order-form__field">
-        <label class="order-form__label" for="order-email">E-mail</label>
-        <input class="order-form__input" id="order-email" name="email" type="email" required>
-      </div>
-      <div class="order-form__field">
-        <label class="order-form__label" for="order-phone">Телефон</label>
-        <input class="order-form__input" id="order-phone" name="phone" type="tel" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
-      </div>
-      <div class="order-form__field">
-        <label class="order-form__label" for="order-topic">Тема заявки</label>
-        <select class="order-form__select" id="order-topic" name="topic" required>
-          <option value="">Выберите тему</option>
-          <option value="product">Заказ клавиатуры</option>
-          <option value="consultation">Консультация по выбору</option>
-          <option value="delivery">Вопрос по доставке</option>
-        </select>
-      </div>
-      <div class="order-form__field">
-        <label class="order-form__label" for="order-comment">Комментарий</label>
-        <textarea class="order-form__textarea" id="order-comment" name="comment" rows="4"></textarea>
-      </div>
-      <div class="order-form__field">
-        <label class="order-form__label">
-          <input class="order-form__input" id="order-agreement" name="agreement" type="checkbox" required>
-          Я согласен на обработку данных
-        </label>
-      </div>
-      <div class="order-form__actions">
-        <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
-        <button class="button button--primary" type="submit">Отправить заявку</button>
-      </div>
-    </form>
-  </dialog>
-  
-  <p class="success-message" id="success-message" hidden>Форма успешно отправлена!</p>
-  <a class="button button--primary scroll-top" href="#" aria-label="Наверх">↑</a>
-</body>
+      <section class="section">
+        <h2>Характеристики</h2>
+        <!-- Этап 16. Обертка для таблицы -->
+        <div class="table-wrapper">
+          <table class="product-table">
+            <caption>
+              Технические характеристики ARDOR GAMING Blade Pro
+            </caption>
+            <thead>
+              <tr>
+                <th>Параметр</th>
+                <th>Значение</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Тип</td>
+                <td>Механическая</td>
+              </tr>
+              <tr>
+                <td>Свитчи</td>
+                <td>Red (линейные)</td>
+              </tr>
+              <tr>
+                <td>Раскладка</td>
+                <td>87 клавиш (TKL)</td>
+              </tr>
+              <tr>
+                <td>Подсветка</td>
+                <td>RGB, 16.8 млн цветов</td>
+              </tr>
+              <tr>
+                <td>Подключение</td>
+                <td>USB Type-C, съёмный кабель</td>
+              </tr>
+              <tr>
+                <td>Гарантия</td>
+                <td>12 месяцев</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 KeyStore. Все права защищены.</p>
+    </footer>
+
+    <dialog
+      class="order-dialog"
+      id="order-dialog"
+      aria-labelledby="order-dialog-title"
+    >
+      <h2 class="order-dialog__title" id="order-dialog-title">
+        Оформление заявки
+      </h2>
+      <form
+        class="order-form"
+        id="order-form"
+        action="#"
+        method="post"
+        novalidate
+      >
+        <input id="selected-product" name="selected-product" type="hidden" />
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-name">Имя</label>
+          <input
+            class="order-form__input"
+            id="order-name"
+            name="name"
+            type="text"
+            minlength="2"
+            required
+          />
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-email">E-mail</label>
+          <input
+            class="order-form__input"
+            id="order-email"
+            name="email"
+            type="email"
+            required
+          />
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-phone">Телефон</label>
+          <input
+            class="order-form__input"
+            id="order-phone"
+            name="phone"
+            type="tel"
+            pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+            required
+          />
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-topic">Тема заявки</label>
+          <select
+            class="order-form__select"
+            id="order-topic"
+            name="topic"
+            required
+          >
+            <option value="">Выберите тему</option>
+            <option value="product">Заказ клавиатуры</option>
+            <option value="consultation">Консультация по выбору</option>
+            <option value="delivery">Вопрос по доставке</option>
+          </select>
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-comment"
+            >Комментарий</label
+          >
+          <textarea
+            class="order-form__textarea"
+            id="order-comment"
+            name="comment"
+            rows="4"
+          ></textarea>
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label">
+            <input
+              class="order-form__input"
+              id="order-agreement"
+              name="agreement"
+              type="checkbox"
+              required
+            />
+            Я согласен на обработку данных
+          </label>
+        </div>
+        <div class="order-form__actions">
+          <button
+            class="button button--secondary"
+            type="button"
+            id="close-order-dialog"
+          >
+            Закрыть
+          </button>
+          <button class="button button--primary" type="submit">
+            Отправить заявку
+          </button>
+        </div>
+      </form>
+    </dialog>
+
+    <p class="success-message" id="success-message" hidden>
+      Форма успешно отправлена!
+    </p>
+    <a class="button button--primary scroll-top" href="#" aria-label="Наверх"
+      >↑</a
+    >
+  </body>
 </html>
